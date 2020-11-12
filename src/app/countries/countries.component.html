@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="countries">
+    <div class="container">
+        <mat-form-field>
+            <mat-label>Selecione o País</mat-label>
+            <mat-select [(value)]="selected" (selectionChange)="filteredCountries($event.value)">
+                <mat-option *ngFor="let country of countries" value="{{country.Country}}" >
+                {{country.Country}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>
+<app-graphic [chart]="chart"></app-graphic>
+<app-table [dataTables]="dataTables"></app-table>

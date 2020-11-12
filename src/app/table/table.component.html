@@ -1,0 +1,36 @@
+<div class="container">
+  <table class="table table-bordered table-dark"  *ngIf="dataTables">
+    <thead>
+      <tr>
+        <th scope="col">Ocorrências</th>
+        <th scope="col">Número de Pessoas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Novos Confirmado</td>
+        <td>{{formatPerMil(dataTables.NewConfirmed)}}</td>
+      </tr>
+      <tr>
+        <td>Total Confirmado</td>
+        <td>{{formatPerMil(dataTables.TotalConfirmed)}}</td>
+      </tr>
+      <tr>
+        <td>Novos Óbitos</td>
+        <td>{{formatPerMil(dataTables.NewDeaths)}}</td>
+      </tr>
+      <tr>
+        <td>Total de Óbitos</td>
+        <td>{{formatPerMil(dataTables.TotalDeaths)}}</td>
+      </tr>
+      <tr>
+        <td>Novas Recorrências</td>
+        <td>{{formatPerMil(dataTables.NewRecovered)}}</td>
+      </tr>
+      <tr>
+        <td>Total de Recorrências</td>
+        <td>{{formatPerMil(dataTables.TotalRecovered)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
